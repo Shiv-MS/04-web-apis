@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Quiz</title>
   <link rel="stylesheet" href="style.css">
+  <script src=script.js></script>
 </head>
+
 <body>
-  <div class="container"></div>
-      <div id="home" class="flex-center flexcolumn">
-        <h1>Code Quiz</h1>
-      </div>
+  <div class="container">
+    
+    <!-- Quiz Start Screen -->
+    <div id="startPrompt" class=start-prompt>
+      <h1 class="start-title">Code Quiz</h1>
+      <h2 class="start-header">Flex your coding knowledge by completing this quiz!</h2>
+      <h4 class="start-description">
+        When you click the start button then a timer starts and you are presented with a question.<br>
+        When you answer a question then you are presented with another question.<br>
+        When you answer a question incorrectly then time is subtracted from the clock.<br>
+        When all questions are answered or the timer reaches 0 then the game is over.<br>
+        When the game is over you can save your initial score.
+      </h4>
+      <button id="startQuiz" class="start-quiz">Start Quiz</button>
+    </div>
+  </div>
 </body>
+
 </html>
