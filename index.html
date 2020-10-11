@@ -11,9 +11,9 @@
 
 <body>
   <div class="container">
-    
+
     <!-- Quiz Start Screen -->
-    <div id="startPrompt" class=start-prompt>
+    <div id="startPrompt" class="start-prompt hide-section">
       <h1 class="start-title">Code Quiz</h1>
       <h2 class="start-header">Flex your coding knowledge by completing this quiz!</h2>
       <h4 class="start-description">
@@ -27,14 +27,29 @@
     </div>
 
     <!-- Quiz Questions -->
-    <div id="quizPrompts" class="quiz-prompts">
+    <div id="quizPrompts" class="quiz-prompts hide-section">
       <div id="quizQuestions">Question</div>
       <div id="quizAnswers" class="quiz-answers"></div>
       <h4 id="quizTimer">Timer</h4>
     </div>
 
     <!-- Quiz Scoreboard -->
-    
+    <div id="scoreboardResults hide-section" class="scoreboard-results">
+      <div>
+        <form action="submit" id="initialForm" class="hide-section">
+          <label for="initial">Enter your initials: </label>
+          <input type="text" id="initial" />
+          <button class="btn" id="submit-btn">Submit</button>
+        </form>
+        <div id="scoreBoard" class="hide-section">
+          <h1>Scores</h1>
+          <div class="scoreDiv">
+            <p id="scoreboardDisplay"></p>
+          </div>
+          <button class="btn" id="restart-btn">Restart Quiz</button>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 
