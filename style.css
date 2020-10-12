@@ -9,13 +9,17 @@ body {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 2rem;
     color: #000;
     margin-bottom: 4rem;
 }
 
 h2 {
     font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+h4 {
     margin-bottom: 3rem;
 }
 
