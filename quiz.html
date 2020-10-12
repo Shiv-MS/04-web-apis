@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="quiz" class="justify-center flex-column">
+            <div id="quizHud">
+                <div class="quiz-hud-section">
+                    <p id="progressText" class="quiz-hud-prefix">
+                        Question
+                    </p>
+                    <div id="progressBar">
+                        <div id="progressBarFull"></div>
+                    </div>
+                </div>
+                <div class="quiz-hud-section">
+                    <p class="quiz-hud-prefix">
+                        Score
+                    </p>
+                    <h1 class="quiz-hud-main-text" id="score">
+                        0
+                    </h1>
+                </div>
+            </div>
+            <h1 id="quizQuestion">Dynamic Questions</h1>
+            <div class="quiz-choice-container">
+                <p class="quiz-choice-prefix">A</p>
+                <p class="quiz-choice-text" data-number="1">Choice 1</p>
+            </div>
+            <div class="quiz-choice-container">
+                <p class="quiz-choice-prefix">B</p>
+                <p class="quiz-choice-text" data-number="2">Choice 2</p>
+            </div>
+            <div class="quiz-choice-container">
+                <p class="quiz-choice-prefix">C</p>
+                <p class="quiz-choice-text" data-number="3">Choice 3</p>
+            </div>
+            <div class="quiz-choice-container">
+                <p class="quiz-choice-prefix">D</p>
+                <p class="quiz-choice-text" data-number="4">Choice 4</p>
+            </div>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>

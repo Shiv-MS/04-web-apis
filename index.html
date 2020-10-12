@@ -11,11 +11,8 @@
 
 <body>
   <div class="container">
-
-    <!-- Quiz Start Screen -->
-    <div id="startPrompt" class="start-prompt hide-section">
-      <h1 class="start-title">Code Quiz</h1>
-      <h2 class="start-header">Flex your coding knowledge by completing this quiz!</h2>
+    <div id="home" class="flex-column flex-center">
+      <h1>Flex your coding knowledge by completing this quiz!</h1>
       <h4 class="start-description">
         When you click the start button then a timer starts and you are presented with a question.<br>
         When you answer a question then you are presented with another question.<br>
@@ -23,34 +20,11 @@
         When all questions are answered or the timer reaches 0 then the game is over.<br>
         When the game is over you can save your initial score.
       </h4>
-      <button id="startQuiz" class="start-quiz">Start Quiz</button>
-    </div>
-
-    <!-- Quiz Questions -->
-    <div id="quizPrompts" class="quiz-prompts hide-section">
-      <div id="quizQuestions">Question</div>
-      <div id="quizAnswers" class="quiz-answers"></div>
-      <h4 id="quizTimer">Timer</h4>
-    </div>
-
-    <!-- Quiz Scoreboard -->
-    <div id="scoreboardResults hide-section" class="scoreboard-results">
-      <div>
-        <form action="submit" id="initialForm" class="hide-section">
-          <label for="initial">Enter your initials: </label>
-          <input type="text" id="initial" />
-          <button class="btn" id="submit-btn">Submit</button>
-        </form>
-        <div id="scoreBoard" class="hide-section">
-          <h1>Scores</h1>
-          <div class="scoreDiv">
-            <p id="scoreboardDisplay"></p>
-          </div>
-          <button class="btn" id="restart-btn">Restart Quiz</button>
-        </div>
-      </div>
+      <a href="quiz.html" class="button">Start Quiz</a>
+      <a href="highscores.html" id="highScoreButton" class="button">High Scores</a>
     </div>
   </div>
+  <script src="end.js"></script>
 </body>
 
 </html>
