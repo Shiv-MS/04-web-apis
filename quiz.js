@@ -47,14 +47,30 @@ let questions = [
 
 const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 4;
+let time = 60;
 
 startGame = () => {
     questionCounter = 0
     score = 0
+    setInterval(run_timer, 1000)
     availableQuestions = [...questions]
     getNewQuestion()
 };
 
+const run_timer = (penalty = 0) => {
+    if (time <= 0) {
+        clearInterval()
+        alert("Game over")
+    } else {
+        if (penalty != 0) {
+            time = time - penalty
+            document.getElementById("timer").textContent = time
+        } else {
+            time--
+            document.getElementById("timer").textContent = time
+        }
+    }
+}
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
@@ -62,6 +78,7 @@ getNewQuestion = () => {
         return window.location.assign('end.html')
     }
 
+    document.getElementById("timer").textContent = time
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`
