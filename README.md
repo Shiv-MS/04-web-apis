@@ -1,13 +1,11 @@
 # Code Quiz
-<!-- ## The Repository
-This repository ("`04-javascript`") is where my Code Quiz app resides [Code Quiz](https://shiv-ms.github.io/04-web-apis/)  The quiz requires the user to answer a series of prompts to gather the password criteria.  When all prompts are answered then a password is generated that matches the selected criteria
-### The Password Generator will require the following information and validation before creating a password:
-* Choose a length of at least 8 characters and no more than 128 characters
-* Choose lowercase, uppercase, numeric, and/or special characters
-* Input should be validated and at least one character type should be selected
-* Once all promts are answered a password is generated and is then written to the page
-## Password Generator
-#### Desktop Image of Homepage
-<p align="center">
-  <img alt="Password Generator Image" src="img/readme.png">
-</p> -->
+## The Repository
+This repository ("`04-web-apis`") is where my Code Quiz app resides [Code Quiz](https://shiv-ms.github.io/04-web-apis/).  The quiz requires the user to complete the 5 question quiz in 60 seconds. The user will gain 100 points for each correct answer, and lose 10 seconds for each incorect answer.  The user will then be able to save their score.
+### The user is given these rules to follow, which are the same rules used to define the logic of the app
+* When you click the start button then a timer starts and you are presented with a question.
+* When you answer a question then you are presented with another question.
+* When you answer a question incorrectly then time is subtracted from the clock.
+* When all questions are answered or the timer reaches 0 then the game is over.
+* When the game is over you can save your initial score.
+# Code Quiz Demonstration
+![](./img/code_quiz.gif)
