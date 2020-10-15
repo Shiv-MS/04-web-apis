@@ -8,4 +8,6 @@ This repository ("`04-web-apis`") is where my Code Quiz app resides [Code Quiz](
 * When all questions are answered or the timer reaches 0 then the game is over.
 * When the game is over you can save your initial score.
 # Code Quiz Demonstration
-![](./img/code_quiz.gif)
+<p align="center">
+  <img alt="Code Quiz Demo" src="img/code_quiz.gif">
+</p>
