@@ -1,3 +1,4 @@
+// Defining variables
 const userName = document.querySelector('#winnerName');
 const saveScoreButton = document.querySelector('#saveScoreButton');
 const finalScore = document.querySelector('#finalScore');
@@ -13,6 +14,7 @@ userName.addEventListener('keyup', () => {
     saveScoreButton.disabled = !userName.value
 })
 
+// function to store score for local storage
 saveHighScore = e => {
     e.preventDefault()
 

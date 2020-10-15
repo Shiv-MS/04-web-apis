@@ -1,3 +1,4 @@
+// Defining variables
 const question = document.querySelector('#quizQuestion');
 const choices = Array.from(document.querySelectorAll('.quiz-choice-text'));
 const progressText = document.querySelector('#progressText');
@@ -10,6 +11,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+// Questions Array Object
 let questions = [
     {
         question: 'Inside which HTML element do we put the JavaScript?',
@@ -53,10 +55,12 @@ let questions = [
     }
 ]
 
+// Defining game variables
 const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 5;
 let time = 60;
 
+// function to start game
 startGame = () => {
     questionCounter = 0
     score = 0
@@ -65,6 +69,7 @@ startGame = () => {
     getNewQuestion()
 };
 
+// function to start timer and redirect after timer runs out
 const run_timer = () => {
     if (time <= 0) {
         clearInterval()
@@ -75,6 +80,8 @@ const run_timer = () => {
         document.getElementById("timer").textContent = time
     }
 }
+
+// function to cycle through questions at random
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
@@ -101,6 +108,7 @@ getNewQuestion = () => {
     acceptingAnswers = true
 };
 
+// function for right and wrong logic
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if (!acceptingAnswers) return
@@ -127,11 +135,13 @@ choices.forEach(choice => {
     })
 })
 
+// increases score when correct question is selected
 incrementScore = num => {
     score += num
     scoreText.innerText = score
 }
 
+// decreases time when incorrect question is selected
 decrementTime = timeHit => {
     time -= 10
 }
