@@ -5,7 +5,7 @@
     border-radius: 50px;
     background: blue;
     font-size: 1rem;
-    min-width: 75rem;
+    min-width: 50rem;
 }
 
 .quiz-choice-container:hover {
@@ -22,6 +22,8 @@
 .quiz-choice-text {
     /* padding: 2rem; */
     width: 100%;
+    color: white;
+    margin-top: 1.5rem;
 }
 
 .rightAnswer {
@@ -64,5 +66,11 @@
 @media screen and (max-width: 768px) {
     .quiz-choice-container {
         min-width: 35rem;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    .quiz-choice-container {
+        min-width: 20rem;
     }
 }

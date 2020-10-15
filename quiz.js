@@ -42,11 +42,19 @@ let questions = [
         choice3: 'msg("Hello World");',
         choice4: 'alert("Hello World");',
         answer: 4,
+    },
+    {
+        question: 'How do you write "Javascript is cool!" in an alert box?',
+        choice1: 'alertBox("Javascript is cool!");',
+        choice2: 'msgBox("Javascript is cool!");',
+        choice3: 'msg("Javascript is cool!");',
+        choice4: 'alert("Javascript is cool!");',
+        answer: 4,
     }
 ]
 
 const SCORE_POINTS = 100;
-const MAX_QUESTIONS = 4;
+const MAX_QUESTIONS = 5;
 let time = 60;
 
 startGame = () => {
@@ -72,7 +80,7 @@ const run_timer = (penalty = 0) => {
     }
 }
 getNewQuestion = () => {
-    if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
         return window.location.assign('end.html')

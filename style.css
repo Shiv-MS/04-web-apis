@@ -19,8 +19,12 @@ h2 {
     margin-bottom: 3rem;
 }
 
-h4 {
+ul {
     margin-bottom: 3rem;
+}
+
+li {
+    margin-bottom: 1rem;
 }
 
 .container {
