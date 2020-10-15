@@ -17,10 +17,10 @@ let questions = [
         choice2: '<script>',
         choice3: '<scripting>',
         choice4: '<javascript>',
-        answer: 1,
+        answer: 2,
     },
     {
-        question: 'Where is the correct place to insert a JavaScript?',
+        question: 'Where is the correct place to insert a JavaScript source?',
         choice1: '<head>',
         choice2: '<body>',
         choice3: 'Can be placed in Both <head> and <body>',
@@ -68,8 +68,8 @@ startGame = () => {
 const run_timer = () => {
     if (time <= 0) {
         clearInterval()
-        alert("Game over")
-        location.href = 'end.html';
+        location.href = 'end.html'
+        alert("Out of Time! But Save Your Score :).")
     } else {
         time--
         document.getElementById("timer").textContent = time
