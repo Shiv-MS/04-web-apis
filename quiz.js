@@ -69,6 +69,7 @@ const run_timer = () => {
     if (time <= 0) {
         clearInterval()
         alert("Game over")
+        location.href = 'end.html';
     } else {
         time--
         document.getElementById("timer").textContent = time
