@@ -65,18 +65,13 @@ startGame = () => {
     getNewQuestion()
 };
 
-const run_timer = (penalty = 0) => {
+const run_timer = () => {
     if (time <= 0) {
         clearInterval()
         alert("Game over")
     } else {
-        if (penalty != 0) {
-            time = time - penalty
-            document.getElementById("timer").textContent = time
-        } else {
-            time--
-            document.getElementById("timer").textContent = time
-        }
+        time--
+        document.getElementById("timer").textContent = time
     }
 }
 getNewQuestion = () => {
@@ -119,6 +114,10 @@ choices.forEach(choice => {
             incrementScore(SCORE_POINTS)
         }
 
+        if (classToApply == 'wrongAnswer') {
+            decrementTime(time)
+        }
+
         selectedChoice.parentElement.classList.add(classToApply)
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
@@ -130,6 +129,10 @@ choices.forEach(choice => {
 incrementScore = num => {
     score += num
     scoreText.innerText = score
+}
+
+decrementTime = timeHit => {
+    time -= 10
 }
 
 startGame()
