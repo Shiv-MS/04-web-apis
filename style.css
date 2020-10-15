@@ -82,3 +82,23 @@ li {
     cursor: not-allowed;
     transform: none;
 }
+
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 35rem;
+}
+
+#end-text {
+    font-size: 1.5rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 15rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 50px;
+}
